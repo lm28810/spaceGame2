@@ -11,6 +11,27 @@ html{
     height: 100vh;
 }
 
+.icon{
+    display: flex;
+    justify-content: end;
+    justify-items: end;
+    margin: none ;
+    padding: none;
+}
+
+.dark-mode{
+    background-color: rgba(0, 0, 0, 0.845);
+    color: whitesmoke;
+}
+
+
+#nav{
+    display: flex;
+   justify-content: end;
+   margin: 4rem;
+
+}
+
 header{
     display: flex;
     flex-direction: column;
@@ -28,7 +49,8 @@ p{
     justify-content: center;
     justify-items: center;
     margin: auto;
-    
+    padding-bottom: 2rem;
+
     width: 60ch;
 }
 
@@ -39,6 +61,37 @@ p{
     font-weight: 700;
 }
 
+hr{
+    background-color: red;
+}
+
+.dark-mode hr{
+    background-color: white;
+}
+
 button{
+    background-color: rgb(31, 31, 188);
+    color:whitesmoke;
     font-family: 'Poppins', sans-serif;
+    font-size: 1.5rem;
+    padding: 18px;
+    margin: auto;
+    outline: 0.2rem solid rgba(255, 0, 0, 0.785) ;
+    text-align: center;
+    
+    width: 90vw;
+}
+
+.game-container{
+    display: flex;
+    margin: 4rem;
+}
+
+.enemy-ship{
+    margin: 56px;
+    padding: 2rem;
+}
+
+footer{
+    text-align: center;
 }
