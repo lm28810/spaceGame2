@@ -7,8 +7,13 @@
     border: none;
 }
 
-html{
+body{
     height: 100vh;
+    background-color: whitesmoke;
+    background-image: url(./Images/moon3.jpg);
+    background-repeat: repeat-y;
+    background-size: cover;
+    color: whitesmoke;
 }
 
 .icon{
@@ -21,6 +26,7 @@ html{
 
 .dark-mode{
     background-color: rgba(0, 0, 0, 0.845);
+        background-image: url(./Images/stars.jpg);
     color: whitesmoke;
 }
 
@@ -84,12 +90,29 @@ button{
 
 .game-container{
     display: flex;
+    flex-wrap: wrap;
+    
     margin: 4rem;
 }
 
 .enemy-ship{
     margin: 56px;
     padding: 2rem;
+}
+
+.databox{
+    border: .4rem dotted blue ;
+    padding: 1rem;
+}
+
+.main-ship{
+    display: flex;
+    flex-direction: column;
+    padding: 1.5rem;   
+}
+
+.disappear{
+    display: none;
 }
 
 footer{
