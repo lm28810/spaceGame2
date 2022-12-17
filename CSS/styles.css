@@ -7,13 +7,15 @@
     border: none;
 }
 
-body{
+html, body{
     height: 100vh;
-    background-color: whitesmoke;
+    background-color: black;
     background-image: url(./Images/moon3.jpg);
     background-repeat: repeat-y;
     background-size: cover;
     color: whitesmoke;
+    padding-top: -220;
+    
 }
 
 .icon{
@@ -27,6 +29,7 @@ body{
 .dark-mode{
     background-color: rgba(0, 0, 0, 0.845);
         background-image: url(./Images/stars.jpg);
+        background-attachment: local;
     color: whitesmoke;
 }
 
@@ -84,8 +87,13 @@ button{
     margin: auto;
     outline: 0.2rem solid rgba(255, 0, 0, 0.785) ;
     text-align: center;
-    
     width: 90vw;
+}
+
+button:hover{
+    background-color: #ffe11bd5;
+    color: black;
+    outline: 0.2rem solid red ;
 }
 
 .game-container{
@@ -114,6 +122,8 @@ button{
 .disappear{
     display: none;
 }
+
+
 
 footer{
     text-align: center;
