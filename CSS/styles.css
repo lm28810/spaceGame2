@@ -111,6 +111,7 @@ button, .reset{
 .reset{
     border: yellow;
     background-color: red;
+    padding: .75rem;
     width: 5vw;
 }
 
