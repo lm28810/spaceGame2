@@ -112,7 +112,7 @@ button, .reset{
     border: yellow;
     background-color: red;
     padding: .75rem;
-    width: 5vw;
+    width: fit-content;
 }
 
 button:hover, .reset:hover{
