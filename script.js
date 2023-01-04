@@ -1,10 +1,15 @@
 
-// let darkicon = document.querySelector('.icon');
-// darkicon.addEventListener('click', function () {
-//     let body = document.body;
-//     body.classList.toggle('dark-mode')
-// })
+ let darkicon = document.querySelector('.icon');
+ darkicon.addEventListener('click', function () {
+     let body = document.body;
+     body.classList.toggle('dark-mode')
+ })
 //console.log(darkicon)
+
+let reset = document.querySelector('.reset');
+reset.addEventListener('click', function() {
+    window.location.reload()
+})
 
 //This class holds the array that will hold the alienships 
 
@@ -42,11 +47,13 @@ class Aliens{
     randomDeci(min, max) { 
     return +(Math.random() * (max - min) + min).toFixed(1);
 } 
-    addAlienShip() {
+    addAlienShip(name) {
         
-        let newAlien = new SpaceShip(this.randomNumber(3,6), this.randomNumber(2,4), this.randomDeci(.6, .8));
+        let newAlien = new SpaceShip(this.randomNumber(3, 6), this.randomNumber(2, 4), this.randomDeci(.6, .8));
+        
         this.ships.push(newAlien)
     }
+    
 
 }
 //Alien Class End 
@@ -60,7 +67,9 @@ const  enemies = new Aliens();
     enemies.addAlienShip()
     enemies.addAlienShip()
 //console.log(enemies.ships)    
+  
 
+//console.log(levels)
 // MainShip
 let HelloWorld = new SpaceShip(20, 5, 0.7)
 
@@ -78,26 +87,31 @@ const fightBattle = () => {
         while (HelloWorld.hull > 0 || fleet[i].hull > 0) {
               
             if (Math.random() < HelloWorld.accuracy) {
-                console.log(`Enemy Ship ${fleet[i]} have been hit!`);
+                console.log(`Enemy Ship ${i} have been hit!`);
                 HelloWorld.attack(fleet[i])
             }
             if (fleet[i].hull < 1) {
+                
                 break
             }
             if (Math.random() < fleet[i].accuracy) {
                 console.log('USS have been hit!');
                 fleet[i].attack(HelloWorld)
+                document.getElementById("usso-data").innerText-= 5
                 
             }
             if (HelloWorld.hull < 1) {
                 break
             }
         }
-          
-
+        
+           
+ 
     }
      
     //         //Loop End 
+   
+
     
     //     //Function End 
 }
